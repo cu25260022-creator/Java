@@ -1,5 +1,5 @@
 # Java
-_Q1. Write a Java program to display your name, age, and college name using variables of appropriate data type_
+**Q1. Write a Java program to display your name, age, and college name using variables of appropriate data type**
 .
 public class {
     public static void main(String[] args) {
@@ -19,8 +19,8 @@ Age: 20
 College: COER University
 
 
-Q2. Input two integers and print the result of all arithmetic operations (addition, subtraction, multiplication, division, and modulus).
-import java.util.Scanner;
+**Q2. Input two integers and print the result of all arithmetic operations (addition, subtraction, multiplication, division, and modulus).
+import java.util.Scanner;**
 
 public class Q2 {
     public static void main(String[] args) {
@@ -40,18 +40,18 @@ public class Q2 {
     }
 }
 
-Output:
+**Output:
 Enter first number: 20
 Enter second number: 5
 Addition = 25
 Subtraction = 15
 Multiplication = 100
 Division = 4
-Modulus = 0
+Modulus = 0**
 
 
-Q3. Write a Java program to check whether a given number is even or odd using the modulus operator and if-else.
-import java.util.Scanner;
+**Q3. Write a Java program to check whether a given number is even or odd using the modulus operator and if-else.
+import java.util.Scanner;**
 
 public class Q3 {
     public static void main(String[] args) {
@@ -68,13 +68,13 @@ public class Q3 {
     }
 }
 
-Output:
+**Output:
 Enter a number: 12
-Even number
+Even number**
 
 
-Q4. Write a program to demonstrate the use of relational operators by comparing two numbers.
-import java.util.Scanner;
+**Q4. Write a program to demonstrate the use of relational operators by comparing two numbers.
+import java.util.Scanner;**
 
 public class Q4 {
     public static void main(String[] args) {
@@ -94,7 +94,7 @@ public class Q4 {
         System.out.println("a <= b: " + (a <= b));
     }
 }
-Output:
+**Output:
 Enter first number: 10
 Enter second number: 5
 a == b: false
@@ -102,10 +102,10 @@ a != b: true
 a > b: true
 a < b: false
 a >= b: true
-a <= b: false
+a <= b: false**
 
-Q5. Accept a floating-point number and convert it explicitly to an integer. Print both the original and the converted values.
-import java.util.Scanner;
+**Q5. Accept a floating-point number and convert it explicitly to an integer. Print both the original and the converted values.
+import java.util.Scanner;**
 
 public class Q5 {
     public static void main(String[] args) {
@@ -121,14 +121,14 @@ public class Q5 {
     }
 }
 
-Output:
+**Output:
 Enter a floating-point number: 25.75
 Original value: 25.75
-Converted value: 25
+Converted value: 25**
 
 
-Q6. Write a program to accept a character and print its ASCII value.
-import java.util.Scanner;
+**Q6. Write a program to accept a character and print its ASCII value.
+import java.util.Scanner;**
 
 public class Q6 {
     public static void main(String[] args) {
@@ -144,13 +144,13 @@ public class Q6 {
     }
 }
 
-Output:
+**Output:
 Enter a character: A
 Character: A
-ASCII value: 65
+ASCII value: 65**
 
 
-Q7. Input a number and check if it is divisible by both 3 and 5 using logical operators.
+**Q7. Input a number and check if it is divisible by both 3 and 5 using logical operators.**
 import java.util.Scanner;
 
 public class Q7 {
@@ -168,12 +168,13 @@ public class Q7 {
     }
 }
 
-Output:
+**Output:
 Enter a number: 30
-Number is divisible by both 3 and 5
+Number is divisible by both 3 and 5**
 
 
-Q8. Input a character and check whether it is a vowel or a consonant using if-else.
+**Q8. Input a character and check whether it is a vowel or a consonant using if-else.**
+
 import java.util.Scanner;
 
 public class Q8 {
@@ -195,13 +196,13 @@ public class Q8 {
     }
 }
 
-Output:
+**Output:
 Enter a character: E
-Vowel
+Vowel**
 
 
-Q9. Input marks of three subjects, calculate total and percentage, and print pass/fail using if-else (passing criteria: >=40% in all subjects).
-import java.util.Scanner;
+**Q9. Input marks of three subjects, calculate total and percentage, and print pass/fail using if-else (passing criteria: >=40% in all subjects).
+import java.util.Scanner;**
 
 public class Q9 {
     public static void main(String[] args) {
@@ -230,17 +231,17 @@ public class Q9 {
     }
 }
 
-Output:
+**Output:
 Enter marks of subject 1: 70
 Enter marks of subject 2: 65
 Enter marks of subject 3: 80
 Total = 215.0
 Percentage = 71.666664%
-Result: Pass
+Result: Pass**
 
 
-Q10. Write a program to find the greatest of two numbers using if-else.
-import java.util.Scanner;
+**Q10. Write a program to find the greatest of two numbers using if-else.
+import java.util.Scanner;**
 
 public class Q10 {
     public static void main(String[] args) {
@@ -262,10 +263,10 @@ public class Q10 {
     }
 }
 
-Output:
+**Output:
 Enter first number: 25
 Enter second number: 40
-40 is the greatest
+40 is the greatest**
 
 
 import java.util.Scanner;
