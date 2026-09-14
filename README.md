@@ -1,6 +1,7 @@
 # Java
-Q1. Write a Java program to display your name, age, and college name using variables of appropriate data types.
-public class Q1 {
+_Q1. Write a Java program to display your name, age, and college name using variables of appropriate data type_
+.
+public class {
     public static void main(String[] args) {
         String name = "Aryan";
         int age = 20;
@@ -11,10 +12,13 @@ public class Q1 {
         System.out.println("College: " + college);
     }
 }
+
 Output:
 Name: Aryan
 Age: 20
 College: COER University
+
+
 Q2. Input two integers and print the result of all arithmetic operations (addition, subtraction, multiplication, division, and modulus).
 import java.util.Scanner;
 
@@ -35,6 +39,7 @@ public class Q2 {
         System.out.println("Modulus = " + (a % b));
     }
 }
+
 Output:
 Enter first number: 20
 Enter second number: 5
@@ -43,6 +48,8 @@ Subtraction = 15
 Multiplication = 100
 Division = 4
 Modulus = 0
+
+
 Q3. Write a Java program to check whether a given number is even or odd using the modulus operator and if-else.
 import java.util.Scanner;
 
@@ -60,9 +67,12 @@ public class Q3 {
         }
     }
 }
+
 Output:
 Enter a number: 12
 Even number
+
+
 Q4. Write a program to demonstrate the use of relational operators by comparing two numbers.
 import java.util.Scanner;
 
@@ -93,6 +103,7 @@ a > b: true
 a < b: false
 a >= b: true
 a <= b: false
+
 Q5. Accept a floating-point number and convert it explicitly to an integer. Print both the original and the converted values.
 import java.util.Scanner;
 
@@ -109,10 +120,13 @@ public class Q5 {
         System.out.println("Converted value: " + converted);
     }
 }
+
 Output:
 Enter a floating-point number: 25.75
 Original value: 25.75
 Converted value: 25
+
+
 Q6. Write a program to accept a character and print its ASCII value.
 import java.util.Scanner;
 
@@ -129,10 +143,13 @@ public class Q6 {
         System.out.println("ASCII value: " + ascii);
     }
 }
+
 Output:
 Enter a character: A
 Character: A
 ASCII value: 65
+
+
 Q7. Input a number and check if it is divisible by both 3 and 5 using logical operators.
 import java.util.Scanner;
 
@@ -150,9 +167,12 @@ public class Q7 {
         }
     }
 }
+
 Output:
 Enter a number: 30
 Number is divisible by both 3 and 5
+
+
 Q8. Input a character and check whether it is a vowel or a consonant using if-else.
 import java.util.Scanner;
 
@@ -174,9 +194,12 @@ public class Q8 {
         }
     }
 }
+
 Output:
 Enter a character: E
 Vowel
+
+
 Q9. Input marks of three subjects, calculate total and percentage, and print pass/fail using if-else (passing criteria: >=40% in all subjects).
 import java.util.Scanner;
 
@@ -206,6 +229,7 @@ public class Q9 {
         }
     }
 }
+
 Output:
 Enter marks of subject 1: 70
 Enter marks of subject 2: 65
@@ -213,6 +237,8 @@ Enter marks of subject 3: 80
 Total = 215.0
 Percentage = 71.666664%
 Result: Pass
+
+
 Q10. Write a program to find the greatest of two numbers using if-else.
 import java.util.Scanner;
 
@@ -235,10 +261,13 @@ public class Q10 {
         }
     }
 }
+
 Output:
 Enter first number: 25
 Enter second number: 40
 40 is the greatest
+
+
 import java.util.Scanner;
 
 class LargestThree {
