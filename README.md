@@ -1,4 +1,244 @@
 # Java
+Q1. Write a Java program to display your name, age, and college name using variables of appropriate data types.
+public class Q1 {
+    public static void main(String[] args) {
+        String name = "Aryan";
+        int age = 20;
+        String college = "COER University";
+
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+        System.out.println("College: " + college);
+    }
+}
+Output:
+Name: Aryan
+Age: 20
+College: COER University
+Q2. Input two integers and print the result of all arithmetic operations (addition, subtraction, multiplication, division, and modulus).
+import java.util.Scanner;
+
+public class Q2 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter first number: ");
+        int a = sc.nextInt();
+
+        System.out.print("Enter second number: ");
+        int b = sc.nextInt();
+
+        System.out.println("Addition = " + (a + b));
+        System.out.println("Subtraction = " + (a - b));
+        System.out.println("Multiplication = " + (a * b));
+        System.out.println("Division = " + (a / b));
+        System.out.println("Modulus = " + (a % b));
+    }
+}
+Output:
+Enter first number: 20
+Enter second number: 5
+Addition = 25
+Subtraction = 15
+Multiplication = 100
+Division = 4
+Modulus = 0
+Q3. Write a Java program to check whether a given number is even or odd using the modulus operator and if-else.
+import java.util.Scanner;
+
+public class Q3 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int n = sc.nextInt();
+
+        if (n % 2 == 0) {
+            System.out.println("Even number");
+        } else {
+            System.out.println("Odd number");
+        }
+    }
+}
+Output:
+Enter a number: 12
+Even number
+Q4. Write a program to demonstrate the use of relational operators by comparing two numbers.
+import java.util.Scanner;
+
+public class Q4 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter first number: ");
+        int a = sc.nextInt();
+
+        System.out.print("Enter second number: ");
+        int b = sc.nextInt();
+
+        System.out.println("a == b: " + (a == b));
+        System.out.println("a != b: " + (a != b));
+        System.out.println("a > b: " + (a > b));
+        System.out.println("a < b: " + (a < b));
+        System.out.println("a >= b: " + (a >= b));
+        System.out.println("a <= b: " + (a <= b));
+    }
+}
+Output:
+Enter first number: 10
+Enter second number: 5
+a == b: false
+a != b: true
+a > b: true
+a < b: false
+a >= b: true
+a <= b: false
+Q5. Accept a floating-point number and convert it explicitly to an integer. Print both the original and the converted values.
+import java.util.Scanner;
+
+public class Q5 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a floating-point number: ");
+        double num = sc.nextDouble();
+
+        int converted = (int) num;
+
+        System.out.println("Original value: " + num);
+        System.out.println("Converted value: " + converted);
+    }
+}
+Output:
+Enter a floating-point number: 25.75
+Original value: 25.75
+Converted value: 25
+Q6. Write a program to accept a character and print its ASCII value.
+import java.util.Scanner;
+
+public class Q6 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a character: ");
+        char ch = sc.next().charAt(0);
+
+        int ascii = (int) ch;
+
+        System.out.println("Character: " + ch);
+        System.out.println("ASCII value: " + ascii);
+    }
+}
+Output:
+Enter a character: A
+Character: A
+ASCII value: 65
+Q7. Input a number and check if it is divisible by both 3 and 5 using logical operators.
+import java.util.Scanner;
+
+public class Q7 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int n = sc.nextInt();
+
+        if (n % 3 == 0 && n % 5 == 0) {
+            System.out.println("Number is divisible by both 3 and 5");
+        } else {
+            System.out.println("Number is not divisible by both 3 and 5");
+        }
+    }
+}
+Output:
+Enter a number: 30
+Number is divisible by both 3 and 5
+Q8. Input a character and check whether it is a vowel or a consonant using if-else.
+import java.util.Scanner;
+
+public class Q8 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a character: ");
+        char ch = sc.next().charAt(0);
+
+        if (ch == 'a' || ch == 'e' || ch == 'i' ||
+            ch == 'o' || ch == 'u' ||
+            ch == 'A' || ch == 'E' || ch == 'I' ||
+            ch == 'O' || ch == 'U') {
+            
+            System.out.println("Vowel");
+        } else {
+            System.out.println("Consonant");
+        }
+    }
+}
+Output:
+Enter a character: E
+Vowel
+Q9. Input marks of three subjects, calculate total and percentage, and print pass/fail using if-else (passing criteria: >=40% in all subjects).
+import java.util.Scanner;
+
+public class Q9 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter marks of subject 1: ");
+        float m1 = sc.nextFloat();
+
+        System.out.print("Enter marks of subject 2: ");
+        float m2 = sc.nextFloat();
+
+        System.out.print("Enter marks of subject 3: ");
+        float m3 = sc.nextFloat();
+
+        float total = m1 + m2 + m3;
+        float percentage = total / 3;
+
+        System.out.println("Total = " + total);
+        System.out.println("Percentage = " + percentage + "%");
+
+        if (m1 >= 40 && m2 >= 40 && m3 >= 40) {
+            System.out.println("Result: Pass");
+        } else {
+            System.out.println("Result: Fail");
+        }
+    }
+}
+Output:
+Enter marks of subject 1: 70
+Enter marks of subject 2: 65
+Enter marks of subject 3: 80
+Total = 215.0
+Percentage = 71.666664%
+Result: Pass
+Q10. Write a program to find the greatest of two numbers using if-else.
+import java.util.Scanner;
+
+public class Q10 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter first number: ");
+        int a = sc.nextInt();
+
+        System.out.print("Enter second number: ");
+        int b = sc.nextInt();
+
+        if (a > b) {
+            System.out.println(a + " is the greatest");
+        } else if (b > a) {
+            System.out.println(b + " is the greatest");
+        } else {
+            System.out.println("Both numbers are equal");
+        }
+    }
+}
+Output:
+Enter first number: 25
+Enter second number: 40
+40 is the greatest
 import java.util.Scanner;
 
 class LargestThree {
