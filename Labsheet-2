@@ -1,0 +1,796 @@
+
+Q1. Write a Java program to find the area of a triangle given its three sides using Heron’s formula.
+import java.util.Scanner
+
+class Q1 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter three sides: ");
+        double a = sc.nextDouble();
+        double b = sc.nextDouble();
+        double c = sc.nextDouble();
+
+        double s = (a + b + c) / 2;
+        double area = Math.sqrt(s * (s - a) * (s - b) * (s - c));
+
+        System.out.println("Area of triangle = " + area);
+    }
+}
+
+Output:
+Enter three sides: 3 4 5
+Area of triangle = 6.0
+
+Q2. Create a Java program to calculate the compound interest given principal, rate, and time.
+import java.util.Scanner;
+
+class Q2 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter principal: ");
+        double p = sc.nextDouble();
+
+        System.out.print("Enter rate: ");
+        double r = sc.nextDouble();
+
+        System.out.print("Enter time: ");
+        double t = sc.nextDouble();
+
+        double amount = p * Math.pow((1 + r / 100), t);
+        double ci = amount - p;
+
+        System.out.println("Compound Interest = " + ci);
+        System.out.println("Amount = " + amount);
+    }
+}
+
+Output:
+Enter principal: 10000
+Enter rate: 10
+Enter time: 2
+Compound Interest = 2100.0
+Amount = 12100.0
+
+Q3. Develop a Java program to find the distance between two points in a 2D plane using the distance formula.
+import java.util.Scanner;
+
+class Q3 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter x1 and y1: ");
+        double x1 = sc.nextDouble();
+        double y1 = sc.nextDouble();
+
+        System.out.print("Enter x2 and y2: ");
+        double x2 = sc.nextDouble();
+        double y2 = sc.nextDouble();
+
+        double distance = Math.sqrt(
+            Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2)
+        );
+
+        System.out.println("Distance = " + distance);
+    }
+}
+
+Output:
+Enter x1 and y1: 0 0
+Enter x2 and y2: 3 4
+Distance = 5.0
+
+Q4. Write a Java program to demonstrate prefix and postfix increment by simulating a counter for visitors entering and leaving a store.
+class Q4 {
+    public static void main(String[] args) {
+        int visitors = 10;
+
+        System.out.println("Initial visitors = " + visitors);
+
+        System.out.println("Visitor entering: " + (++visitors));
+        System.out.println("Visitor leaving: " + (visitors--));
+
+        System.out.println("Final visitors = " + visitors);
+    }
+}
+Output:
+Initial visitors = 10
+Visitor entering: 11
+Visitor leaving: 11
+Final visitors = 10
+
+
+Q5. Create a Java program that takes an integer and outputs its negative value using unary operators.
+import java.util.Scanner;
+
+class Q5 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter an integer: ");
+        int n = sc.nextInt();
+
+        System.out.println("Negative value = " + (-n));
+    }
+}
+
+Output:
+Enter an integer: 25
+Negative value = -25
+
+
+Q6. Write a Java program to gradually reduce a number by half using /= until it becomes less than 1, counting the number of steps.
+import java.util.Scanner;
+
+class Q6 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        double n = sc.nextDouble();
+
+        int steps = 0;
+
+        while (n >= 1) {
+            n /= 2;
+            steps++;
+        }
+
+        System.out.println("Number of steps = " + steps);
+        System.out.println("Final value = " + n);
+    }
+}
+
+Output:
+Enter a number: 16
+Number of steps = 5
+Final value = 0.5
+
+
+Q7. Create a Java program to accumulate rainfall data for 7 days using += and find the total.
+import java.util.Scanner;
+
+class Q7 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        double total = 0;
+
+        for (int i = 1; i <= 7; i++) {
+            System.out.print("Enter rainfall for day " + i + ": ");
+            double rainfall = sc.nextDouble();
+            total += rainfall;
+        }
+
+        System.out.println("Total rainfall = " + total);
+    }
+}
+
+Output:
+Enter rainfall for day 1: 10
+Enter rainfall for day 2: 20
+Enter rainfall for day 3: 15
+Enter rainfall for day 4: 5
+Enter rainfall for day 5: 10
+Enter rainfall for day 6: 25
+Enter rainfall for day 7: 15
+Total rainfall = 100.0
+
+
+Q8. Write a Java program to check whether three given angles form a valid triangle.
+import java.util.Scanner;
+
+class Q8 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter three angles: ");
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        int c = sc.nextInt();
+
+        if (a > 0 && b > 0 && c > 0 && a + b + c == 180)
+            System.out.println("Valid triangle");
+        else
+            System.out.println("Invalid triangle");
+    }
+}
+Output:
+Enter three angles: 60 60 60
+Valid triangle
+Q9. Create a Java program to compare two strings for lexicographic order without using built-in compare functions.
+import java.util.Scanner;
+
+class Q9 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter first string: ");
+        String s1 = sc.nextLine();
+
+        System.out.print("Enter second string: ");
+        String s2 = sc.nextLine();
+
+        int min = Math.min(s1.length(), s2.length());
+        int result = 0;
+
+        for (int i = 0; i < min; i++) {
+            if (s1.charAt(i) < s2.charAt(i)) {
+                result = -1;
+                break;
+            } else if (s1.charAt(i) > s2.charAt(i)) {
+                result = 1;
+                break;
+            }
+        }
+
+        if (result == 0 && s1.length() != s2.length()) {
+            result = s1.length() < s2.length() ? -1 : 1;
+        }
+
+        if (result < 0)
+            System.out.println("First string comes before second string");
+        else if (result > 0)
+            System.out.println("First string comes after second string");
+        else
+            System.out.println("Both strings are equal");
+    }
+}
+
+Output:
+Enter first string: Apple
+Enter second string: Banana
+First string comes before second string
+
+
+Q10. Write a Java program to determine if a given year is both a leap year and within a given range.
+import java.util.Scanner;
+
+class Q10 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter year: ");
+        int year = sc.nextInt();
+
+        System.out.print("Enter lower range: ");
+        int low = sc.nextInt();
+
+        System.out.print("Enter upper range: ");
+        int high = sc.nextInt();
+
+        boolean leap = (year % 400 == 0) ||
+                       (year % 4 == 0 && year % 100 != 0);
+
+        if (leap && year >= low && year <= high)
+            System.out.println("Year is a leap year and within range");
+        else
+            System.out.println("Condition not satisfied");
+    }
+}
+
+Output:
+Enter year: 2024
+Enter lower range: 2000
+Enter upper range: 2030
+Year is a leap year and within range
+
+
+Q11. Create a Java program to check if a student passes a course, where they must have at least 40% in theory AND 50% in practical OR overall 50%.
+import java.util.Scanner;
+
+class Q11 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter theory marks (%): ");
+        double theory = sc.nextDouble();
+
+        System.out.print("Enter practical marks (%): ");
+        double practical = sc.nextDouble();
+
+        System.out.print("Enter overall marks (%): ");
+        double overall = sc.nextDouble();
+
+        if ((theory >= 40 && practical >= 50) || overall >= 50)
+            System.out.println("Student Passes");
+        else
+            System.out.println("Student Fails");
+    }
+}
+
+Output:
+Enter theory marks (%): 45
+Enter practical marks (%): 55
+Enter overall marks (%): 48
+Student Passes
+
+
+Q12. Write a Java program to find the smallest of four numbers using nested ternary operators.
+import java.util.Scanner;
+
+class Q12 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter four numbers: ");
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        int c = sc.nextInt();
+        int d = sc.nextInt();
+
+        int smallest = (a < b)
+                ? ((a < c) ? ((a < d) ? a : d) : ((c < d) ? c : d))
+                : ((b < c) ? ((b < d) ? b : d) : ((c < d) ? c : d));
+
+        System.out.println("Smallest = " + smallest);
+    }
+}
+
+Output:
+Enter four numbers: 25 10 30 15
+Smallest = 10
+
+
+Q13. Create a Java program to check if a character is a vowel, consonant, digit, or special symbol using the ternary operator.
+import java.util.Scanner;
+
+class Q13 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a character: ");
+        char ch = sc.next().charAt(0);
+
+        String result = Character.isDigit(ch) ? "Digit" :
+                (Character.isLetter(ch) ?
+                ("aeiouAEIOU".indexOf(ch) >= 0 ? "Vowel" : "Consonant")
+                : "Special Symbol");
+
+        System.out.println("Result = " + result);
+    }
+}
+
+Output:
+Enter a character: A
+Result = Vowel
+
+
+Q14. Write a Java program to swap two integers without using a temporary variable using XOR.
+import java.util.Scanner;
+
+class Q14 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter two numbers: ");
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+
+        a = a ^ b;
+        b = a ^ b;
+        a = a ^ b;
+
+        System.out.println("After swapping:");
+        System.out.println("a = " + a);
+        System.out.println("b = " + b);
+    }
+}
+
+Output:
+Enter two numbers: 10 20
+After swapping:
+a = 20
+b = 10
+
+
+Q15. Create a Java program to count the number of set bits (1s) in the binary representation of a number using bitwise operators.
+import java.util.Scanner;
+
+class Q15 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int n = sc.nextInt();
+
+        int count = 0;
+        int temp = n;
+
+        while (temp != 0) {
+            count += temp & 1;
+            temp = temp >>> 1;
+        }
+
+        System.out.println("Number of set bits = " + count);
+    }
+}
+
+Output:
+Enter a number: 15
+Number of set bits = 4
+
+
+Q16. Write a Java program to perform fast multiplication and division of a number by powers of two using shift operators.
+import java.util.Scanner;
+
+class Q16 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int n = sc.nextInt();
+
+        System.out.print("Enter shift value: ");
+        int shift = sc.nextInt();
+
+        int multiplication = n << shift;
+        int division = n >> shift;
+
+        System.out.println("Multiplication result = " + multiplication);
+        System.out.println("Division result = " + division);
+    }
+}
+
+Output:
+Enter a number: 8
+Enter shift value: 2
+Multiplication result = 32
+Division result = 2
+
+
+Q17. Create a Java program to cyclically rotate the bits of an integer to the left by 2 positions.
+import java.util.Scanner;
+
+class Q17 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter an integer: ");
+        int n = sc.nextInt();
+
+        int result = (n << 2) | (n >>> 30);
+
+        System.out.println("After left rotation by 2 bits = " + result);
+    }
+}
+
+Output:
+Enter an integer: 1
+After left rotation by 2 bits = 4
+B. Loops & Control Statements
+
+
+Q18. Write a Java program to print the first 20 terms of the Fibonacci sequence using a for loop.
+class Q18 {
+    public static void main(String[] args) {
+        int a = 0, b = 1;
+
+        System.out.println("First 20 Fibonacci terms:");
+
+        for (int i = 1; i <= 20; i++) {
+            System.out.print(a + " ");
+            int c = a + b;
+            a = b;
+            b = c;
+        }
+    }
+}
+
+Output:
+First 20 Fibonacci terms:
+0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987 1597 2584 4181
+
+
+Q19. Create a Java program to print all Armstrong numbers between 1 and 1000 using a for loop.
+class Q19 {
+    public static void main(String[] args) {
+        System.out.println("Armstrong numbers between 1 and 1000:");
+
+        for (int n = 1; n <= 1000; n++) {
+            int temp = n;
+            int sum = 0;
+
+            while (temp > 0) {
+                int digit = temp % 10;
+                sum += digit * digit * digit;
+                temp /= 10;
+            }
+
+            if (sum == n)
+                System.out.print(n + " ");
+        }
+    }
+}
+
+Output:
+Armstrong numbers between 1 and 1000:
+1 153 370 371 407
+
+
+Q20. Write a Java program to repeatedly accept a password until the correct one is entered using do-while.
+import java.util.Scanner;
+
+class Q20 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        String correctPassword = "java123";
+        String password;
+
+        do {
+            System.out.print("Enter password: ");
+            password = sc.nextLine();
+
+            if (!password.equals(correctPassword))
+                System.out.println("Incorrect password!");
+
+        } while (!password.equals(correctPassword));
+
+        System.out.println("Correct password. Access granted.");
+    }
+}
+Output:
+Enter password: abc
+Incorrect password!
+Enter password: java123
+Correct password. Access granted.
+
+
+Q21. Create a Java program to display all factors of a number using a do-while loop.
+import java.util.Scanner;
+
+class Q21 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int n = sc.nextInt();
+
+        int i = 1;
+
+        System.out.print("Factors: ");
+
+        do {
+            if (n % i == 0)
+                System.out.print(i + " ");
+
+            i++;
+        } while (i <= n);
+    }
+}
+Output:
+Enter a number: 12
+Factors: 1 2 3 4 6 12
+
+
+Q22. Write a Java program to reverse the digits of an integer using a while loop.
+import java.util.Scanner;
+
+class Q22 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter an integer: ");
+        int n = sc.nextInt();
+
+        int reverse = 0;
+
+        while (n != 0) {
+            int digit = n % 10;
+            reverse = reverse * 10 + digit;
+            n /= 10;
+        }
+
+        System.out.println("Reversed number = " + reverse);
+    }
+}
+
+Output:
+Enter an integer: 12345
+Reversed number = 54321
+
+
+Q23. Create a Java program to determine if a number is a palindrome using a while loop.
+import java.util.Scanner;
+
+class Q23 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int n = sc.nextInt();
+
+        int original = n;
+        int reverse = 0;
+
+        while (n != 0) {
+            int digit = n % 10;
+            reverse = reverse * 10 + digit;
+            n /= 10;
+        }
+
+        if (original == reverse)
+            System.out.println("Palindrome number");
+        else
+            System.out.println("Not a palindrome number");
+    }
+}
+
+Output:
+Enter a number: 121
+Palindrome number
+
+
+Q24. Write a Java program to find the maximum and minimum values in an integer array using a for-each loop.
+import java.util.Scanner;
+
+class Q24 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int[] arr = new int[5];
+
+        System.out.println("Enter 5 integers:");
+
+        for (int i = 0; i < 5; i++)
+            arr[i] = sc.nextInt();
+
+        int max = arr[0];
+        int min = arr[0];
+
+        for (int n : arr) {
+            if (n > max)
+                max = n;
+
+            if (n < min)
+                min = n;
+        }
+
+        System.out.println("Maximum = " + max);
+        System.out.println("Minimum = " + min);
+    }
+}
+
+Output:
+Enter 5 integers:
+10 25 5 40 15
+Maximum = 40
+Minimum = 5
+
+
+Q25. Create a Java program to calculate the average marks of students stored in a 2D array using a for-each loop.
+class Q25 {
+    public static void main(String[] args) {
+        int[][] marks = {
+            {80, 70, 90},
+            {60, 75, 85},
+            {90, 95, 88}
+        };
+
+        int sum = 0;
+        int count = 0;
+
+        for (int[] student : marks) {
+            for (int mark : student) {
+                sum += mark;
+                count++;
+            }
+        }
+
+        double average = (double) sum / count;
+
+        System.out.println("Average marks = " + average);
+    }
+}
+
+Output:
+Average marks = 82.55555555555556
+C. switch-case, continue, break
+
+
+Q26. Write a Java program that takes a day number (1–7) and displays whether it’s a weekday or weekend using switch-case.
+import java.util.Scanner;
+
+class Q26 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter day number (1-7): ");
+        int day = sc.nextInt();
+
+        switch (day) {
+            case 1, 2, 3, 4, 5:
+                System.out.println("Weekday");
+                break;
+
+            case 6, 7:
+                System.out.println("Weekend");
+                break;
+
+            default:
+                System.out.println("Invalid day number");
+        }
+    }
+}
+
+Output:
+Enter day number (1-7): 6
+Weekend
+
+
+Q27. Create a Java program that takes a grade (A–F) and prints its qualitative meaning using switch-case.
+import java.util.Scanner;
+
+class Q27 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter grade (A-F): ");
+        char grade = sc.next().toUpperCase().charAt(0);
+
+        switch (grade) {
+            case 'A':
+                System.out.println("Excellent");
+                break;
+            case 'B':
+                System.out.println("Good");
+                break;
+            case 'C':
+                System.out.println("Average");
+                break;
+            case 'D':
+                System.out.println("Below Average");
+                break;
+            case 'E':
+                System.out.println("Pass");
+                break;
+            case 'F':
+                System.out.println("Fail");
+                break;
+            default:
+                System.out.println("Invalid grade");
+        }
+    }
+}
+
+Output:
+Enter grade (A-F): A
+Excellent
+
+
+Q28. Write a Java program to print numbers from 1 to 50, skipping all numbers that are perfect squares using continue.
+class Q28 {
+    public static void main(String[] args) {
+        System.out.println("Numbers from 1 to 50 excluding perfect squares:");
+
+        for (int i = 1; i <= 50; i++) {
+            int root = (int) Math.sqrt(i);
+
+            if (root * root == i)
+                continue;
+
+            System.out.print(i + " ");
+        }
+    }
+}
+
+Output:
+Numbers from 1 to 50 excluding perfect squares:
+2 3 5 6 7 8 10 11 12 13 14 15 17 18 19 20 21 22 23 24 26 27 28 29 30 31 33 34 35 36 37 38 39 40 41 42 43 44 46 47 48 49 50
+
+
+Q29. Create a Java program to generate random integers between 1 and 100 and stop when a number divisible by both 7 and 13 is found using break.
+import java.util.Random;
+
+class Q29 {
+    public static void main(String[] args) {
+        Random random = new Random();
+
+        while (true) {
+            int number = random.nextInt(100) + 1;
+
+            System.out.println("Generated: " + number);
+
+            if (number % 7 == 0 && number % 13 ==
